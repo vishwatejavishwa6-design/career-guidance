@@ -1,0 +1,1044 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Changed font to Poppins for modern look */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f2f5;
+    background-image: radial-gradient(circle at top left, #e0e9f0, #f0f2f5, #e0e9f0);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #333;
+    min-height: 100vh;
+    position: relative; /* Needed for background overlay */
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Subtle overlay for depth */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Light transparent overlay */
+    pointer-events: none; /* Allows clicks to pass through */
+    z-index: -1;
+}
+
+/* Import Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Header and Navigation */
+header {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #3535a2;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #1a73e8; /* Slightly brighter blue for active/hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+    text-shadow: 0 0 5px rgba(30, 144, 255, 0.5); /* Soft glow */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #fa78f8, #f8a0d4); /* Updated gradient to incorporate #fa78f8 */
+    color: white;
+    text-align: center;
+    padding: 8rem 2rem; /* Increased vertical padding */
+    border-bottom-left-radius: 60px; /* Slightly larger radius */
+    border-bottom-right-radius: 60px; /* Slightly larger radius */
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden; /* Ensure pseudo-elements are clipped */
+    animation: fadeIn 1s ease-out; /* Add fade-in animation to hero */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h1 {
+    font-size: 4.5rem; /* Slightly larger font size for impact */
+    margin-bottom: 1.8rem;
+    line-height: 1.2;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.hero p {
+    font-size: 1.8rem; /* Slightly larger for better readability */
+    margin-bottom: 3rem;
+    line-height: 1.5;
+    max-width: 900px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero button {
+    background-color: #28a745; /* Green color for the Get Started button */
+    color: white; /* White text for contrast */
+    padding: 1.3rem 3rem;
+    border: none; /* Ensure no border */
+    border-radius: 50px; /* Pill-shaped button */
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.hero button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-5px); /* More pronounced lift */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Add a subtle background pattern/texture */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXd3Qm94PSIwIDAgNjAgNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiPjxwYXRoIGQ9Ik0zMC4wNjkgOS4wMTlsLjg0OSAxLjMxYTMwLjAwMiAzMC4wMDIgMCAwIDEgMjguMjMgMjcuMjgybC0uMTA5LS45NzNBNDAuMDAyIDQwLjAwMiAwIDAgMCAzMC4wNjkgOS4wMTlsLjAwMi0uMDE4eiIvPjxwYXRoIGQ9Ik01NC40NDUgNDguNDY5YTIwLjAwMiAyMC4wMDIgMCAwIDEtMjQuMzcuNzg0bC0uOTE4IDEuMzA2YTI5Ljk5NyAyOS45OTcgMCAwIDAgMzcuNDQ1LTQuMTE3bC0uOTM1LS4zOTR6Ii8+PHBhdGggZD0iTTI5Ljk5NyAzMC4wMDJsLS41MTctLjg2YTMwLjAwMSAzMC4wMDEgMCAwIDEtLjM3OS0yOS4xNDFsLjk3MS0uMjU1YTM5Ljk5NyAzOS45OTcgMCAwIDAgLjQ4NiAzOC45MDhsLS44NjEuNTE0eiIvPjwvZz48L3N2Zz4=');
+    background-repeat: repeat;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.hero h1, .hero p, .hero button {
+    position: relative;
+    z-index: 1;
+}
+
+/* Main Content Sections */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+/* Roadmap Section */
+.roadmap-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.roadmap-step {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.roadmap-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.step-icon {
+    background-color: #c3a671;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0 auto 1rem auto;
+}
+
+.roadmap-step h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: #007bff;
+}
+
+.roadmap-step p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.roadmap-arrow {
+    font-size: 3rem;
+    color: #007bff;
+    align-self: center;
+    margin: 0 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .roadmap-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .roadmap-arrow {
+        transform: rotate(90deg);
+        margin: 1rem 0;
+    }
+
+    .roadmap-step {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+/* Hobby Suggestions Section */
+#hobby-suggestions {
+    padding: 2rem;
+    text-align: center;
+}
+
+#hobby-suggestions h1 {
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+#hobby-suggestions p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+#hobby-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.hobby-category-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hobby-category-card h2 {
+    color: #0056b3;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+}
+
+.hobby-category-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hobby-category-card li {
+    margin-bottom: 0.7rem;
+    line-height: 1.5;
+    color: #444;
+}
+
+.hobby-category-card li strong {
+    color: #333;
+}
+
+/* Responsive adjustments for Hobby section */
+@media (max-width: 768px) {
+    #hobby-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Filter Options */
+.filter-options {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.filter-options label {
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+    color: #333;
+}
+
+.filter-options select {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.filter-options select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* College Cards Section */
+#colleges-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.college-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.college-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.college-image {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    border-bottom: 1px solid #eee;
+}
+
+.college-info {
+    padding: 1.5rem;
+}
+
+.college-info h2 {
+    color: #0056b3;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.college-info p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+/* Entrance Exams Section */
+#entrance-exams {
+    padding: 2rem;
+    text-align: center;
+}
+
+#entrance-exams h1 {
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+#entrance-exams p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+#exams-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.exam-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exam-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.exam-card h2 {
+    color: #0056b3;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+}
+
+.exam-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.exam-link-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.exam-link-button:hover {
+    background-color: #0056b3;
+}
+
+/* Scholarship Section */
+#scholarship-list {
+    padding: 2rem;
+    text-align: center;
+}
+
+#scholarship-list h1 {
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+#scholarship-list p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+#scholarships-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.scholarship-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scholarship-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.scholarship-card h2 {
+    color: #0056b3;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+}
+
+.scholarship-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.scholarship-link-button {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.scholarship-link-button:hover {
+    background-color: #218838;
+}
+
+/* General Content Section Styling */
+section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+section h1 {
+    color: #007bff;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+section h2 {
+    color: #0056b3;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+section ul {
+    list-style: disc inside;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+section ul li {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+section a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+section a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Aptitude Quiz Section */
+#aptitude-quiz {
+    padding: 2rem;
+    text-align: center;
+}
+
+#aptitude-quiz h1 {
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+#aptitude-quiz p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+#quiz-form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 2.5rem;
+    margin: 0 auto 2rem auto;
+    max-width: 700px;
+    text-align: left;
+}
+
+.question-block {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.question-block:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.question-block p {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.question-block label {
+    display: block;
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+    color: #555;
+    cursor: pointer;
+}
+
+.question-block input[type="radio"] {
+    margin-right: 0.8rem;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#quiz-form button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: fit-content;
+    margin: 2rem auto 0 auto;
+}
+
+#quiz-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#quiz-result {
+    background-color: #e6f7ff; /* Light blue background */
+    border: 1px solid #b3e0ff; /* Blue border */
+    border-radius: 10px;
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+#quiz-result h3 {
+    color: #0056b3;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#quiz-result p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+
+#quiz-result p strong {
+    color: #007bff;
+}
+
+#quiz-result button#save-to-dashboard {
+    background-color: #28a745;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1.5rem;
+    display: block;
+    width: fit-content;
+}
+
+#quiz-result button#save-to-dashboard:hover {
+    background-color: #218838;
+}
+
+/* Personal Dashboard Section */
+#personal-dashboard {
+    padding: 2rem;
+    text-align: center;
+}
+
+#personal-dashboard h1 {
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+#personal-dashboard p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.dashboard-content {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 0 auto 2rem auto;
+    max-width: 600px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-content h2 {
+    color: #0056b3;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.7rem;
+}
+
+.dashboard-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.dashboard-content p strong {
+    color: #007bff;
+}
+
+#clear-dashboard-data {
+    background-color: #dc3545;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#clear-dashboard-data:hover {
+    background-color: #c82333;
+}
+
+/* Key Features Section */
+.features-section {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #fcfdff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    margin-top: 3rem;
+}
+
+.features-section h1 {
+    font-size: 2.8rem;
+    color: #3535a2;
+    margin-bottom: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.feature-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.feature-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: #3535a2;
+    margin-bottom: 1rem;
+    width: 80px;
+    height: 80px;
+    background-color: #e6e6fa; /* Light purple background for icons */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h2 {
+    font-size: 1.6rem;
+    color: #3535a2;
+    margin-bottom: 0.8rem;
+    margin-top: 1rem; /* Adjust margin for heading */
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Allow paragraph to take available space */
+}
+
+.feature-card .button {
+    display: inline-block;
+    background-color: #5d5ddb; /* Blue color for CTA buttons */
+    color: white;
+    padding: 0.7rem 1.8rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: auto; /* Push button to the bottom */
+}
+
+.feature-card .button:hover {
+    background-color: #4a4aba; /* Darker blue on hover */
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments for Key Features section */
+@media (max-width: 768px) {
+    .features-section {
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+    }
+
+    .features-section h1 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .feature-cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+
+    .feature-icon {
+        font-size: 2.5rem;
+        width: 70px;
+        height: 70px;
+    }
+
+    .feature-card h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* General button styling for consistency and enhanced animations */
+.button {
+    display: inline-block;
+    padding: 0.9rem 1.8rem; /* Slightly more padding */
+    border-radius: 8px; /* More rounded corners */
+    text-decoration: none;
+    font-weight: 600; /* Bolder text */
+    transition: background-color 0.3s ease, transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease; /* Enhanced ease-out-back for transform */
+    cursor: pointer;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.button:hover {
+    transform: translateY(-4px) scale(1.03); /* More pronounced lift and slight scale */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+}
+
+/* Card Hover Effects - Applied to all common card classes */
+.hobby-category-card:hover,
+.college-card:hover,
+.exam-card:hover,
+.scholarship-card:hover,
+.feature-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Scroll Reveal Animations */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition-delay: 0.1s; /* Slight delay for staggered effect */
+}
+
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Add staggering for cards within containers */
+.feature-cards-container .feature-card.scroll-reveal,
+#hobby-list .hobby-category-card.scroll-reveal,
+#colleges-container .college-card.scroll-reveal,
+#exams-container .exam-card.scroll-reveal,
+#scholarships-container .scholarship-card.scroll-reveal {
+    transition-delay: calc(var(--animation-order) * 0.1s + 0.1s);
+}
+
+/* Responsive adjustments for overall layout */
+@media (max-width: 992px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 1rem;
+    }
+
+    .hero {
+        padding: 6rem 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero p {
+        font-size: 1.4rem;
+    }
+
+    .hero button {
+        font-size: 1.2rem;
+        padding: 1rem 2.5rem;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    section h1 {
+        font-size: 2.2rem;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+    }
+
+    .roadmap-arrow {
+        margin: 1rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    nav .logo {
+        font-size: 1.5rem;
+    }
+
+    nav ul li {
+        margin: 0.3rem 0.5rem;
+    }
+
+    .hero {
+        padding: 4rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .hero button {
+        font-size: 1rem;
+        padding: 0.8rem 2rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    section h1 {
+        font-size: 1.8rem;
+    }
+
+    section h2 {
+        font-size: 1.4rem;
+    }
+
+    .filter-options select {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+}
