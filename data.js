@@ -243,7 +243,7 @@ const scholarshipsData = [
         name: "UGC Scholarships",
         type: "central",
         description: "Various scholarship schemes provided by the University Grants Commission for higher education.",
-        link: "https://www.ugc.gov.in/page/Scholarships-and-Fellowships.aspx"
+        link: "https://scholarships.gov.in/"
     },
     {
         id: "wbscc",
@@ -271,6 +271,6 @@ const scholarshipsData = [
         name: "Maharashtra E-Scholarship Schemes",
         type: "state-maharashtra",
         description: "Various post-matric scholarship schemes for eligible students in Maharashtra.",
-        link: "https://socialjustice.maharashtra.gov.in/"
+        link: "https://www.buddy4study.com/article/maharashtra-scholarship"
     }
 ];

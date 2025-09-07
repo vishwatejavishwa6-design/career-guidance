@@ -4,19 +4,17 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f0f2f5;
-    background-image: radial-gradient(circle at top left, #e0e9f0, #f0f2f5, #e0e9f0);
-    background-size: 400% 400%;
-    animation: gradientAnimation 15s ease infinite;
+    background-color: #ffffff; /* Changed to white */
+    background-image: none; /* Remove gradient */
+    background-size: auto; /* Reset background size */
+    animation: none; /* Remove animation */
     color: #333;
     min-height: 100vh;
     position: relative; /* Needed for background overlay */
 }
 
 @keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    /* Remove or keep empty as it's no longer used for body */
 }
 
 /* Subtle overlay for depth */
@@ -27,7 +25,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.2); /* Light transparent overlay */
+    background: rgba(0, 0, 0, 0.05); /* Very subtle, light shadow effect */
     pointer-events: none; /* Allows clicks to pass through */
     z-index: -1;
 }
@@ -84,16 +82,16 @@ nav ul li a.active {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #fa78f8, #f8a0d4); /* Updated gradient to incorporate #fa78f8 */
-    color: white;
+    background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d); /* A darker, more distinct gradient */
+    color: #ffffff;
     text-align: center;
-    padding: 8rem 2rem; /* Increased vertical padding */
-    border-bottom-left-radius: 60px; /* Slightly larger radius */
-    border-bottom-right-radius: 60px; /* Slightly larger radius */
-    margin-bottom: 3rem;
+    padding: 10rem 3rem;
+    border-radius: 20px;
+    margin-bottom: 4rem;
     position: relative;
-    overflow: hidden; /* Ensure pseudo-elements are clipped */
-    animation: fadeIn 1s ease-out; /* Add fade-in animation to hero */
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.2s ease-out;
 }
 
 @keyframes fadeIn {
@@ -102,37 +100,42 @@ nav ul li a.active {
 }
 
 .hero h1 {
-    font-size: 4.5rem; /* Slightly larger font size for impact */
-    margin-bottom: 1.8rem;
-    line-height: 1.2;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    color: #ffffff; /* Explicitly set heading color to white */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
 }
 
 .hero p {
-    font-size: 1.8rem; /* Slightly larger for better readability */
-    margin-bottom: 3rem;
-    line-height: 1.5;
-    max-width: 900px;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    font-size: 2rem;
+    margin-bottom: 3.5rem;
+    line-height: 1.4;
+    max-width: 1000px;
+    color: #ffffff; /* Explicitly set paragraph color to white */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero button {
-    background-color: #28a745; /* Green color for the Get Started button */
-    color: white; /* White text for contrast */
-    padding: 1.3rem 3rem;
-    border: none; /* Ensure no border */
-    border-radius: 50px; /* Pill-shaped button */
-    font-size: 1.4rem;
+    background-color: #ff6b6b; /* A vibrant, contrasting button color */
+    color: white;
+    padding: 1.5rem 3.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.6rem;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    letter-spacing: 1.5px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Stronger button shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero button:hover {
-    background-color: #218838; /* Darker green on hover */
-    transform: translateY(-5px); /* More pronounced lift */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    background-color: #ff4757; /* Darker shade on hover */
+    transform: translateY(-7px) scale(1.05); /* More pronounced lift and scale */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5); /* Even stronger shadow on hover */
 }
 
 /* Add a subtle background pattern/texture */
@@ -143,7 +146,7 @@ nav ul li a.active {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXd3Qm94PSIwIDAgNjAgNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiPjxwYXRoIGQ9Ik0zMC4wNjkgOS4wMTlsLjg0OSAxLjMxYTMwLjAwMiAzMC4wMDIgMCAwIDEgMjguMjMgMjcuMjgybC0uMTA5LS45NzNBNDAuMDAyIDQwLjAwMiAwIDAgMCAzMC4wNjkgOS4wMTlsLjAwMi0uMDE4eiIvPjxwYXRoIGQ9Ik01NC40NDUgNDguNDY5YTIwLjAwMiAyMC4wMDIgMCAwIDEtMjQuMzcuNzg0bC0uOTE4IDEuMzA2YTI5Ljk5NyAyOS45OTcgMCAwIDAgMzcuNDQ1LTQuMTE3bC0uOTM1LS4zOTR6Ii8+PHBhdGggZD0iTTI5Ljk5NyAzMC4wMDJsLS41MTctLjg2YTMwLjAwMSAzMC4wMDEgMCAwIDEtLjM3OS0yOS4xNDFsLjk3MS0uMjU1YTM5Ljk5NyAzOS45OTcgMCAwIDAgLjQ4NiAzOC45MDhsLS44NjEuNTE0eiIvPjwvZz48L3N2Zz4=');
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDUiIHN0cm9rZS13aWR0aD0iMSI+PHBhdGggZD0iTTMwLjA2OSA5LjAxOWwuODQ5IDEuMzFhMzAuMDAyIDMwLjAwMiAwIDAgMSAyOC4yMyAyNy4yODJsLS4xMDktLjk3M0E0MC4wMDIgNDAuMDAyIDAgMCAwIDMwLjA2OSA5LjAxOWwuMDAyLS4wMTh6Ii8+PHBhdGggZD0iTTU0LjQ0NSA0OC40NjlhMjAuMDAyIDIwLjAwMiAwIDAgMS0yNC4zNy43ODRsLS45MTggMS4zMDZhMjkuOTk3IDI5Ljk5NyAwIDAgMCAzNy40NDUtNC4xMTdsLS45MzUtLjM5NHoiLz48cGF0aCBkPSJNMjkuOTk3IDMwLjAwMmwtLjUxNy0uODZhMzAuMDMxIDMwLjAzMSAwIDAgMS0uMzc5LTI5LjE0MWw5NzEtLjI1NWEzOS45OTcgMzkuOTk3IDAgMCAwIC40ODYgMzguOTA4bC0uODYxLjUxNHoiLz48L2c+PC9zdmc+');
     background-repeat: repeat;
     opacity: 0.1;
     z-index: 0;
@@ -887,6 +890,86 @@ section a:hover {
 
     .feature-card h2 {
         font-size: 1.4rem;
+    }
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #e6f7ff, #f0f8ff); /* Light blue gradient */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    margin-top: 3rem;
+}
+
+.testimonials-section h1 {
+    font-size: 2.8rem;
+    color: #3535a2;
+    margin-bottom: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.testimonial-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    min-height: 200px; /* Ensure cards have a consistent minimum height */
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    flex-grow: 1;
+}
+
+.testimonial-author {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #3535a2;
+    margin-top: 1rem;
+}
+
+/* Responsive adjustments for Testimonials section */
+@media (max-width: 768px) {
+    .testimonials-section {
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+    }
+
+    .testimonials-section h1 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .testimonial-cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-card {
+        padding: 1.5rem;
     }
 }
 

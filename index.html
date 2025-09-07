@@ -12,6 +12,7 @@
             <div class="logo">Career Guidance</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
                 <li><a href="hobby.html">Hobby & Career</a></li>
                 <li><a href="colleges.html">Top Colleges</a></li>
                 <li><a href="exams.html">Entrance Exams</a></li>
@@ -31,6 +32,23 @@
             <button onclick="location.href='features.html'">Get Started</button>
         </section>
 
+        <section id="testimonials" class="testimonials-section scroll-reveal">
+            <h1>What Our Users Say</h1>
+            <div class="testimonial-cards-container">
+                <div class="testimonial-card scroll-reveal" style="--animation-order:1;">
+                    <p class="testimonial-text">"Career Guidance helped me discover my true calling! The hobby-to-career mapping was incredibly insightful and led me to a path I truly love."</p>
+                    <p class="testimonial-author">- Aisha Sharma</p>
+                </div>
+                <div class="testimonial-card scroll-reveal" style="--animation-order:2;">
+                    <p class="testimonial-text">"The scholarship section is a lifesaver. I found several opportunities I never knew existed and secured funding for my studies. Highly recommend!"</p>
+                    <p class="testimonial-author">- Rohan Patel</p>
+                </div>
+                <div class="testimonial-card scroll-reveal" style="--animation-order:3;">
+                    <p class="testimonial-text">"The college search and exam prep resources are top-notch. I felt fully prepared and confident thanks to Career Guidance."</p>
+                    <p class="testimonial-author">- Priya Singh</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -39,5 +57,33 @@
 
     <script src="script.js"></script>
     <script src="data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const scrollElements = document.querySelectorAll('.scroll-reveal');
+
+            const elementInView = (el, dividend = 1) => {
+                const elementTop = el.getBoundingClientRect().top;
+                return (
+                    elementTop <=
+                    (window.innerHeight || document.documentElement.clientHeight) / dividend
+                );
+            };
+
+            const displayScrollElement = (element) => {
+                element.classList.add('active');
+            };
+
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el) => {
+                    if (elementInView(el, 1.25)) {
+                        displayScrollElement(el);
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', handleScrollAnimation);
+            handleScrollAnimation(); // Initial check on load
+        });
+    </script>
 </body>
 </html>
