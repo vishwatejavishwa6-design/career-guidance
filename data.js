@@ -264,7 +264,7 @@ const scholarshipsData = [
         name: "MahaDBT Scholarship (Maharashtra)",
         type: "state-maharashtra",
         description: "Maharashtra Government\'s Direct Benefit Transfer Portal for various scholarship schemes.",
-        link: "https://mahadbtmahait.gov.in/"
+        link: "https://mahadbt.maharashtra.gov.in"
     },
     {
         id: "e-scholarship-maha",
