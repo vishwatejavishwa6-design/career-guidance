@@ -43,4 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     };
+    
+    // Apply scroll-reveal to new static sections on load
+    applyScrollRevealToCards('successful-professionals', '.professional-card');
+    applyScrollRevealToCards('subject-choices-10th', '.subject-choice-card');
+    applyScrollRevealToCards('polytechnic-courses', '.polytechnic-card');
 });
