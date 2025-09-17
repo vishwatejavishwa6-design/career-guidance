@@ -2,9 +2,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('nav ul li a');
     const currentPath = window.location.pathname.split('/').pop();
+    const currentHash = window.location.hash;
 
     navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPath) {
+        const linkHref = link.getAttribute('href');
+        if (linkHref === currentPath || (linkHref === currentHash && currentHash !== '')) {
+            link.classList.add('active');
+        } else if (linkHref.startsWith('#') && linkHref === currentHash) {
             link.classList.add('active');
         }
     });
