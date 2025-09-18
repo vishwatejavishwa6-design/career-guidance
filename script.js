@@ -1,15 +1,7 @@
-// JavaScript for active navigation link highlighting
+// No JavaScript needed for active navigation link highlighting as there are no navigation links.
+
 document.addEventListener('DOMContentLoaded', () => {
-    const navLinks = document.querySelectorAll('nav ul li a');
-    const currentPath = window.location.pathname.split('/').pop();
-
-    navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPath) {
-            link.classList.add('active');
-        }
-    });
-
-    // Scroll Reveal Logic
+    // Scroll Reveal Logic (kept if there are still scroll-reveal elements in the main content)
     const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
 
     const observerOptions = {
@@ -43,4 +35,34 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     };
+    
+    // Apply scroll-reveal to new static sections on load
+    applyScrollRevealToCards('subject-choices-10th', '.subject-choice-card');
+    applyScrollRevealToCards('polytechnic-courses', '.polytechnic-card');
+
+    const scrollElements = document.querySelectorAll('.scroll-reveal');
+
+    const elementInView = (el, dividend = 1) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return (
+            elementTop <=
+            (window.innerHeight || document.documentElement.clientHeight) / dividend
+        );
+    };
+
+    const displayScrollElement = (element) => {
+        element.classList.add('active');
+    };
+
+    const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+            if (elementInView(el, 1.25)) {
+                displayScrollElement(el);
+            }
+        });
+    };
+
+    window.addEventListener('scroll', handleScrollAnimation);
+    handleScrollAnimation(); // Initial check on load
+
 });

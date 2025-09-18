@@ -12,9 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (filteredColleges.length > 0) {
-            filteredColleges.forEach(college => {
+            filteredColleges.forEach((college, index) => {
                 const collegeCard = document.createElement('div');
-                collegeCard.classList.add('college-card');
+                collegeCard.classList.add('college-card', 'scroll-reveal');
+                collegeCard.style.setProperty('--animation-order', index + 1);
 
                 const collegeImage = document.createElement('img');
                 collegeImage.src = college.image;

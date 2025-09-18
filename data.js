@@ -182,6 +182,47 @@ const collegesData = [
         location: "New Delhi, Delhi",
         description: "One of the oldest and most prestigious colleges in India, known for its strong arts programs.",
         image: "st.stephens college cec.jpeg"
+    },
+    // Degree Colleges
+    {
+        id: "loyola-chennai",
+        name: "Loyola College, Chennai",
+        stream: "degree",
+        location: "Chennai, Tamil Nadu",
+        description: "A prestigious institution offering various undergraduate and postgraduate degree courses in Arts, Science, and Commerce. Known for its academic excellence and vibrant campus life.",
+        image: "loyola degree college chennai.jpg"
+    },
+    {
+        id: "st-josephs-bengaluru",
+        name: "St. Joseph's College, Bengaluru",
+        stream: "degree",
+        location: "Bengaluru, Karnataka",
+        description: "One of the oldest and most reputed colleges in Karnataka, offering diverse degree programs. Focuses on holistic development and academic rigor.",
+        image: "St. Joseph's degree College, Bengaluru.jpg"
+    },
+    {
+        id: "presidency-kolkata",
+        name: "Presidency University, Kolkata",
+        stream: "degree",
+        location: "Kolkata, West Bengal",
+        description: "A historic institution with a strong legacy in liberal arts and sciences. Offers a wide range of undergraduate and postgraduate degree courses.",
+        image: "Presidency  degree University, Kolkata.jpg"
+    },
+    {
+        id: "fergusson-pune",
+        name: "Fergusson College, Pune",
+        stream: "degree",
+        location: "Pune, Maharashtra",
+        description: "A renowned college for arts and sciences, known for its rich history, academic environment, and notable alumni. Offers various degree programs.",
+        image: "Fergusson degree College, Pune.jpg"
+    },
+    {
+        id: "christ-bengaluru",
+        name: "Christ University, Bengaluru",
+        stream: "degree",
+        location: "Bengaluru, Karnataka",
+        description: "A deemed to be university known for its multidisciplinary approach and a wide array of undergraduate and postgraduate degree programs in various fields.",
+        image: "Christ degree University, Bengaluru.jpg"
     }
 ];
 
@@ -243,7 +284,7 @@ const scholarshipsData = [
         name: "UGC Scholarships",
         type: "central",
         description: "Various scholarship schemes provided by the University Grants Commission for higher education.",
-        link: "https://www.ugc.gov.in/page/Scholarships-and-Fellowships.aspx"
+        link: "https://scholarships.gov.in/"
     },
     {
         id: "wbscc",
@@ -264,13 +305,13 @@ const scholarshipsData = [
         name: "MahaDBT Scholarship (Maharashtra)",
         type: "state-maharashtra",
         description: "Maharashtra Government\'s Direct Benefit Transfer Portal for various scholarship schemes.",
-        link: "https://mahadbtmahait.gov.in/"
+        link: "https://mahadbt.maharashtra.gov.in"
     },
     {
         id: "e-scholarship-maha",
         name: "Maharashtra E-Scholarship Schemes",
         type: "state-maharashtra",
         description: "Various post-matric scholarship schemes for eligible students in Maharashtra.",
-        link: "https://socialjustice.maharashtra.gov.in/"
+        link: "https://www.buddy4study.com/article/maharashtra-scholarship"
     }
 ];
