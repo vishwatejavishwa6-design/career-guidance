@@ -1,6 +1,48 @@
 // No JavaScript needed for active navigation link highlighting as there are no navigation links.
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Language Switcher Logic
+    const languageSelect = document.getElementById('language-select');
+    let currentLang = localStorage.getItem('lang') || 'en';
+
+    if (languageSelect) {
+        languageSelect.value = currentLang;
+        languageSelect.addEventListener('change', (event) => {
+            currentLang = event.target.value;
+            localStorage.setItem('lang', currentLang);
+            translatePage();
+        });
+    }
+
+    function translatePage() {
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            if (translations[currentLang] && translations[currentLang][key]) {
+                if (key === "copyright") {
+                    element.innerHTML = translations[currentLang][key];
+                } else {
+                    element.textContent = translations[currentLang][key];
+                }
+            }
+        });
+        // Update placeholders and titles if any
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+            const key = element.getAttribute('data-i18n-placeholder');
+            if (translations[currentLang] && translations[currentLang][key]) {
+                element.placeholder = translations[currentLang][key];
+            }
+        });
+        document.querySelectorAll('[data-i18n-title]').forEach(element => {
+            const key = element.getAttribute('data-i18n-title');
+            if (translations[currentLang] && translations[currentLang][key]) {
+                element.title = translations[currentLang][key];
+            }
+        });
+    }
+
+    // Initial translation on load
+    translatePage();
+
     // Scroll Reveal Logic (kept if there are still scroll-reveal elements in the main content)
     const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
 

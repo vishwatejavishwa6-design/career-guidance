@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Guidance</title>
+    <title data-i18n-title="professional_guidance">Professional Guidance</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,38 +11,45 @@
 
     <header>
         <nav>
-            <div class="logo">Professional Guidance</div>
+            <div class="logo" data-i18n="professional_guidance">Professional Guidance</div>
+            <div class="language-switcher">
+                <label for="language-select">Language:</label>
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                </select>
+            </div>
         </nav>
     </header>
 
     <main>
         <!-- Subject Choices for 10th Grade Section -->
         <section id="subject-choices-10th" class="scroll-reveal">
-            <h1>Subject Choices After 10th Grade</h1>
-            <p>Choosing the right stream after 10th grade is crucial for your career path. Explore the options and what they entail.</p>
+            <h1 data-i18n="subject_choices_10th_heading">Subject Choices After 10th Grade</h1>
+            <p data-i18n="subject_choices_10th_intro">Choosing the right stream after 10th grade is crucial for your career path. Explore the options and what they entail.</p>
             <div class="subject-choices-container">
                 <div class="subject-choice-card scroll-reveal">
-                    <h2>Science Stream</h2>
+                    <h2 data-i18n="science_stream">Science Stream</h2>
                     <ul>
-                        <li>**Focus:** Physics, Chemistry, Biology/Math</li>
-                        <li>**Career Paths:** Engineering, Medicine, Research, IT</li>
-                        <li>**Key Skills:** Analytical thinking, problem-solving, logical reasoning</li>
+                        <li data-i18n="science_focus">**Focus:** Physics, Chemistry, Biology/Math</li>
+                        <li data-i18n="science_careers">**Career Paths:** Engineering, Medicine, Research, IT</li>
+                        <li data-i18n="science_skills">**Key Skills:** Analytical thinking, problem-solving, logical reasoning</li>
                     </ul>
                 </div>
                 <div class="subject-choice-card scroll-reveal">
-                    <h2>Commerce Stream</h2>
+                    <h2 data-i18n="commerce_stream">Commerce Stream</h2>
                     <ul>
-                        <li>**Focus:** Accountancy, Business Studies, Economics, Math</li>
-                        <li>**Career Paths:** Finance, Accounting, Business Management, Marketing</li>
-                        <li>**Key Skills:** Financial literacy, organizational skills, critical thinking</li>
+                        <li data-i18n="commerce_focus">**Focus:** Accountancy, Business Studies, Economics, Math</li>
+                        <li data-i18n="commerce_careers">**Career Paths:** Finance, Accounting, Business Management, Marketing</li>
+                        <li data-i18n="commerce_skills">**Key Skills:** Financial literacy, organizational skills, critical thinking</li>
                     </ul>
                 </div>
                 <div class="subject-choice-card scroll-reveal">
-                    <h2>Arts/Humanities Stream</h2>
+                    <h2 data-i18n="arts_humanities_stream">Arts/Humanities Stream</h2>
                     <ul>
-                        <li>**Focus:** History, Political Science, Geography, Psychology, Literature</li>
-                        <li>**Career Paths:** Civil Services, Journalism, Law, Teaching, Design</li>
-                        <li>**Key Skills:** Communication, creativity, critical analysis, research</li>
+                        <li data-i18n="arts_focus">**Focus:** History, Political Science, Geography, Psychology, Literature</li>
+                        <li data-i18n="arts_careers">**Career Paths:** Civil Services, Journalism, Law, Teaching, Design</li>
+                        <li data-i18n="arts_skills">**Key Skills:** Communication, creativity, critical analysis, research</li>
                     </ul>
                 </div>
             </div>
@@ -50,81 +57,82 @@
 
         <!-- Polytechnic Courses Section -->
         <section id="polytechnic-courses" class="scroll-reveal">
-            <h1>Explore Polytechnic Courses</h1>
-            <p>Polytechnic courses offer hands-on training and direct entry into various technical careers after 10th or 12th grade.</p>
+            <h1 data-i18n="explore_polytechnic_courses">Explore Polytechnic Courses</h1>
+            <p data-i18n="polytechnic_intro">Polytechnic courses offer hands-on training and direct entry into various technical careers after 10th or 12th grade.</p>
             <div class="polytechnic-cards-container">
                 <div class="polytechnic-card scroll-reveal">
-                    <h2>Diploma in Engineering</h2>
+                    <h2 data-i18n="diploma_engineering">Diploma in Engineering</h2>
                     <ul>
-                        <li>**Fields:** Mechanical, Civil, Electrical, Computer Science, Electronics</li>
-                        <li>**Eligibility:** 10th pass</li>
-                        <li>**Career:** Junior Engineer, Technician roles</li>
+                        <li data-i18n="engineering_fields">**Fields:** Mechanical, Civil, Electrical, Computer Science, Electronics</li>
+                        <li data-i18n="engineering_eligibility">**Eligibility:** 10th pass</li>
+                        <li data-i18n="engineering_career">**Career:** Junior Engineer, Technician roles</li>
                     </ul>
-                    <a href="https://www.shiksha.com/engineering/articles/polytechnic-courses-after-10th-top-colleges-career-opportunities-exams-blogId-208562" class="button" target="_blank">View Details</a>
+                    <a href="https://www.shiksha.com/engineering/articles/polytechnic-courses-after-10th-top-colleges-career-opportunities-exams-blogId-208562" class="button" target="_blank" data-i18n="view_details">View Details</a>
                 </div>
                 <div class="polytechnic-card scroll-reveal">
-                    <h2>Diploma in Business Administration</h2>
+                    <h2 data-i18n="diploma_business_admin">Diploma in Business Administration</h2>
                     <ul>
-                        <li>**Fields:** Marketing, Finance, HR, Operations</li>
-                        <li>**Eligibility:** 10th/12th pass</li>
-                        <li>**Career:** Business Analyst, Office Manager, Marketing Assistant</li>
+                        <li data-i18n="business_fields">**Fields:** Marketing, Finance, HR, Operations</li>
+                        <li data-i18n="business_eligibility">**Eligibility:** 10th/12th pass</li>
+                        <li data-i18n="business_career">**Career:** Business Analyst, Office Manager, Marketing Assistant</li>
                     </ul>
-                    <a href="https://www.collegedekho.com/articles/list-of-polytechnic-courses/" class="button" target="_blank">View Details</a>
+                    <a href="https://www.collegedekho.com/articles/list-of-polytechnic-courses/" class="button" target="_blank" data-i18n="view_details">View Details</a>
                 </div>
                 <div class="polytechnic-card scroll-reveal">
-                    <h2>Diploma in Hotel Management</h2>
+                    <h2 data-i18n="diploma_hotel_management">Diploma in Hotel Management</h2>
                     <ul>
-                        <li>**Fields:** Food & Beverage, Front Office, Housekeeping, Culinary Arts</li>
-                        <li>**Eligibility:** 10th/12th pass</li>
-                        <li>**Career:** Hotel Operations, Chef, Event Management</li>
+                        <li data-i18n="hotel_fields">**Fields:** Food & Beverage, Front Office, Housekeeping, Culinary Arts</li>
+                        <li data-i18n="hotel_eligibility">**Eligibility:** 10th/12th pass</li>
+                        <li data-i18n="hotel_career">**Career:** Hotel Operations, Chef, Event Management</li>
                     </ul>
-                    <a href="https://idreamcareer.com/blog/polytechnic-courses-after-10th/" class="button" target="_blank">View Details</a>
+                    <a href="https://idreamcareer.com/blog/polytechnic-courses-after-10th/" class="button" target="_blank" data-i18n="view_details">View Details</a>
                 </div>
             </div>
         </section>
 
         <!-- Vocational Courses Section -->
         <section id="vocational-courses" class="scroll-reveal">
-            <h1>Explore Vocational Courses</h1>
-            <p>Vocational courses provide practical skills for specific trades, offering direct entry into various industries after 10th grade.</p>
+            <h1 data-i18n="explore_vocational_courses">Explore Vocational Courses</h1>
+            <p data-i18n="vocational_intro">Vocational courses provide practical skills for specific trades, offering direct entry into various industries after 10th grade.</p>
             <div class="polytechnic-cards-container">
                 <div class="polytechnic-card scroll-reveal">
-                    <h2>Certificate in Electrician</h2>
+                    <h2 data-i18n="cert_electrician">Certificate in Electrician</h2>
                     <ul>
-                        <li>**Duration:** 1 Year</li>
-                        <li>**Eligibility:** 10th Pass</li>
-                        <li>**Career:** Electrician, Electrical Technician</li>
+                        <li data-i18n="electrician_duration">**Duration:** 1 Year</li>
+                        <li data-i18n="electrician_eligibility">**Eligibility:** 10th Pass</li>
+                        <li data-i18n="electrician_career">**Career:** Electrician, Electrical Technician</li>
                     </ul>
-                    <a href="https://www.aicvps.org/CourseList/Vocational-Courses-After-10th-%281-Year%29-3048-4201" class="button" target="_blank">View Details</a>
+                    <a href="https://www.aicvps.org/CourseList/Vocational-Courses-After-10th-%281-Year%29-3048-4201" class="button" target="_blank" data-i18n="view_details">View Details</a>
                 </div>
                 <div class="polytechnic-card scroll-reveal">
-                    <h2>Diploma in Nanny Care</h2>
+                    <h2 data-i18n="diploma_nanny_care">Diploma in Nanny Care</h2>
                     <ul>
-                        <li>**Duration:** 2 Years</li>
-                        <li>**Eligibility:** 10th Pass</li>
-                        <li>**Career:** Nanny, Childcare Professional</li>
+                        <li data-i18n="nanny_duration">**Duration:** 2 Years</li>
+                        <li data-i18n="nanny_eligibility">**Eligibility:** 10th Pass</li>
+                        <li data-i18n="nanny_career">**Career:** Nanny, Childcare Professional</li>
                     </ul>
-                    <a href="https://nctaindia.in/courses?course_id=1767" class="button" target="_blank">View Details</a>
+                    <a href="https://nctaindia.in/courses?course_id=1767" class="button" target="_blank" data-i18n="view_details">View Details</a>
                 </div>
                 <div class="polytechnic-card scroll-reveal">
-                    <h2>Diploma in Automobile</h2>
+                    <h2 data-i18n="diploma_automobile">Diploma in Automobile</h2>
                     <ul>
-                        <li>**Duration:** 2 Years</li>
-                        <li>**Eligibility:** 10th Pass</li>
-                        <li>**Career:** Automobile Technician, Service Advisor</li>
+                        <li data-i18n="automobile_duration">**Duration:** 2 Years</li>
+                        <li data-i18n="automobile_eligibility">**Eligibility:** 10th Pass</li>
+                        <li data-i18n="automobile_career">**Career:** Automobile Technician, Service Advisor</li>
                     </ul>
-                    <a href="https://www.aicvps.org/CourseList/Vocational-Courses-After-10th-%282-Year%29-3048-4202" class="button" target="_blank">View Details</a>
+                    <a href="https://www.aicvps.org/CourseList/Vocational-Courses-After-10th-%282-Year%29-3048-4202" class="button" target="_blank" data-i18n="view_details">View Details</a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Career Guidance. All rights reserved.</p>
+        <p data-i18n="copyright">&copy; 2025 Career Guidance. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
     <script src="data.js"></script>
+    <script src="language.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {

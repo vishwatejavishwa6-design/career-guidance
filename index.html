@@ -11,25 +11,33 @@
 
     <header>
         <nav>
-            <div class="logo">Professional Guidance</div>
+            <div class="logo" data-i18n="professional_guidance">Professional Guidance</div>
+            <div class="language-switcher">
+                <label for="language-select">Language:</label>
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                </select>
+            </div>
         </nav>
     </header>
 
     <main>
         <section id="homepage-intro" class="hero scroll-reveal">
-            <h1>Welcome to Professional Guidance!</h1>
-            <p>Your one-stop solution for navigating your academic and career journey. Explore hobbies, colleges, exams, scholarships, and more.</p>
-            <button onclick="location.href='features.html'">Get Started</button>
+            <h1 data-i18n="welcome_message">Welcome to Professional Guidance!</h1>
+            <p data-i18n="intro_paragraph">Your one-stop solution for navigating your academic and career journey. Explore hobbies, colleges, exams, scholarships, and more.</p>
+            <button onclick="location.href='features.html'" data-i18n="get_started">Get Started</button>
         </section>
 
     </main>
 
     <footer>
-        <p>&copy; 2025 Professional Guidance. All rights reserved.</p>
+        <p data-i18n="copyright">&copy; 2025 Professional Guidance. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
     <script src="data.js"></script>
+    <script src="language.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script>

@@ -3,27 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Guidance</title>
+    <title data-i18n-title="professional_guidance">Professional Guidance</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Professional Guidance</div>
+            <div class="logo" data-i18n="professional_guidance">Professional Guidance</div>
+            <div class="language-switcher">
+                <label for="language-select">Language:</label>
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                </select>
+            </div>
         </nav>
     </header>
 
     <main>
         <section id="scholarship-list" class="scroll-reveal">
-            <h1>Scholarship Opportunities</h1>
-            <p>Find various scholarships to support your education.</p>
+            <h1 data-i18n="scholarship_opportunities_heading">Scholarship Opportunities</h1>
+            <p data-i18n="scholarship_page_intro">Find various scholarships to support your education.</p>
             <div class="filter-options">
-                <label for="scholarship-type-select">Filter by Type:</label>
+                <label for="scholarship-type-select" data-i18n="filter_by_type">Filter by Type:</label>
                 <select id="scholarship-type-select">
-                    <option value="all">All</option>
-                    <option value="central">Central Government</option>
-                    <option value="state-west-bengal">West Bengal State</option>
-                    <option value="state-maharashtra">Maharashtra State</option>
+                    <option value="all" data-i18n="all">All</option>
+                    <option value="central" data-i18n="central_government">Central Government</option>
+                    <option value="state-west-bengal" data-i18n="west_bengal_state">West Bengal State</option>
+                    <option value="state-maharashtra" data-i18n="maharashtra_state">Maharashtra State</option>
                 </select>
             </div>
             <div id="scholarships-container">
@@ -33,11 +40,12 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Career Guidance. All rights reserved.</p>
+        <p data-i18n="copyright">&copy; 2025 Career Guidance. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
     <script src="data.js"></script>
+    <script src="language.js"></script>
     <script src="scholarships.js"></script>
 </body>
 </html>

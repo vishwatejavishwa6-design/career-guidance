@@ -2,57 +2,57 @@
 
 const hobbiesData = [
     {
-        hobby: "Reading & Writing",
+        hobbyKey: "reading_writing_hobby",
         suggestions: [
-            { career: "Author/Writer", description: "Craft compelling stories, articles, or marketing copy." },
-            { career: "Journalist", description: "Report on news and events for various media." },
-            { career: "Editor", description: "Refine and improve written content." },
-            { career: "Content Creator", description: "Develop engaging content for digital platforms." }
+            { careerKey: "author_writer_career", descriptionKey: "author_writer_desc" },
+            { careerKey: "journalist_career", descriptionKey: "journalist_desc" },
+            { careerKey: "editor_career", descriptionKey: "editor_desc" },
+            { careerKey: "content_creator_career", descriptionKey: "content_creator_desc" }
         ]
     },
     {
-        hobby: "Gaming",
+        hobbyKey: "gaming_hobby",
         suggestions: [
-            { career: "Game Developer", description: "Design and program video games." },
-            { career: "Esports Player/Coach", description: "Compete professionally or train esports teams." },
-            { career: "Game Tester", description: "Identify bugs and provide feedback on games." },
-            { career: "Streamer/Content Creator (Gaming)", description: "Create and share gaming content online." }
+            { careerKey: "game_developer_career", descriptionKey: "game_developer_desc" },
+            { careerKey: "esports_player_coach_career", descriptionKey: "esports_player_coach_desc" },
+            { careerKey: "game_tester_career", descriptionKey: "game_tester_desc" },
+            { careerKey: "streamer_content_creator_gaming_career", descriptionKey: "streamer_content_creator_gaming_desc" }
         ]
     },
     {
-        hobby: "Art & Design",
+        hobbyKey: "art_design_hobby",
         suggestions: [
-            { career: "Graphic Designer", description: "Create visual concepts for branding, websites, etc." },
-            { career: "Illustrator", description: "Create original images for books, magazines, digital media." },
-            { career: "Animator", description: "Bring characters and stories to life through motion." },
-            { career: "Fashion Designer", description: "Design clothing and accessories." }
+            { careerKey: "graphic_designer_career", descriptionKey: "graphic_designer_desc" },
+            { careerKey: "illustrator_career", descriptionKey: "illustrator_desc" },
+            { careerKey: "animator_career", descriptionKey: "animator_desc" },
+            { careerKey: "fashion_designer_career", descriptionKey: "fashion_designer_desc" }
         ]
     },
     {
-        hobby: "Sports & Fitness",
+        hobbyKey: "sports_fitness_hobby",
         suggestions: [
-            { career: "Athlete/Coach", description: "Compete or train others in sports." },
-            { career: "Sports Journalist", description: "Report on sports events and athletes." },
-            { career: "Fitness Trainer", description: "Guide individuals in achieving fitness goals." },
-            { career: "Sports Psychologist", description: "Help athletes improve mental performance." }
+            { careerKey: "athlete_coach_career", descriptionKey: "athlete_coach_desc" },
+            { careerKey: "sports_journalist_career", descriptionKey: "sports_journalist_desc" },
+            { careerKey: "fitness_trainer_career", descriptionKey: "fitness_trainer_desc" },
+            { careerKey: "sports_psychologist_career", descriptionKey: "sports_psychologist_desc" }
         ]
     },
     {
-        hobby: "Cooking & Baking",
+        hobbyKey: "cooking_baking_hobby",
         suggestions: [
-            { career: "Chef/Cook", description: "Prepare and cook food in various settings." },
-            { career: "Baker/Pastry Chef", description: "Create delicious baked goods and desserts." },
-            { career: "Food Critic/Blogger", description: "Review and write about food and restaurants." },
-            { career: "Nutritionist/Dietitian", description: "Advise on diet and nutrition for health." }
+            { careerKey: "chef_cook_career", descriptionKey: "chef_cook_desc" },
+            { careerKey: "baker_pastry_chef_career", descriptionKey: "baker_pastry_chef_desc" },
+            { careerKey: "food_critic_blogger_career", descriptionKey: "food_critic_blogger_desc" },
+            { careerKey: "nutritionist_dietitian_career", descriptionKey: "nutritionist_dietitian_desc" }
         ]
     },
     {
-        hobby: "Technology & Coding",
+        hobbyKey: "technology_coding_hobby",
         suggestions: [
-            { career: "Software Developer", description: "Build and maintain software applications." },
-            { career: "Web Developer", description: "Design and develop websites." },
-            { career: "Data Scientist", description: "Analyze complex data to extract insights." },
-            { career: "Cybersecurity Analyst", description: "Protect computer systems and networks from threats." }
+            { careerKey: "software_developer_career", descriptionKey: "software_developer_desc" },
+            { careerKey: "web_developer_career", descriptionKey: "web_developer_desc" },
+            { careerKey: "data_scientist_career", descriptionKey: "data_scientist_desc" },
+            { careerKey: "cybersecurity_analyst_career", descriptionKey: "cybersecurity_analyst_desc" }
         ]
     }
 ];
@@ -61,167 +61,167 @@ const collegesData = [
     // Engineering Colleges
     {
         id: "iit-bombay",
-        name: "IIT Bombay",
+        nameKey: "iit_bombay_name",
         stream: "engineering",
-        location: "Mumbai, Maharashtra",
-        description: "One of India\'s most prestigious engineering institutes, known for its excellent faculty and research facilities.",
+        locationKey: "mumbai_maharashtra",
+        descriptionKey: "iit_bombay_desc",
         image: "iit-bombay engineering colleges.jpeg"
     },
     {
         id: "iit-delhi",
-        name: "IIT Delhi",
+        nameKey: "iit_delhi_name",
         stream: "engineering",
-        location: "New Delhi, Delhi",
-        description: "Renowned for its strong academics and innovation in various engineering disciplines.",
+        locationKey: "new_delhi_delhi",
+        descriptionKey: "iit_delhi_desc",
         image: "iit-delhi Engineering college.jpeg"
     },
     {
         id: "iit-kanpur",
-        name: "IIT Kanpur",
+        nameKey: "iit_kanpur_name",
         stream: "engineering",
-        location: "Kanpur, Uttar Pradesh",
-        description: "A leading institute focusing on research and education in engineering, science, and technology.",
+        locationKey: "kanpur_uttar_pradesh",
+        descriptionKey: "iit_kanpur_desc",
         image: "iit-kanpur engineering colleges.jpeg"
     },
     {
         id: "iit-kharagpur",
-        name: "IIT Kharagpur",
+        nameKey: "iit_kharagpur_name",
         stream: "engineering",
-        location: "Kharagpur, West Bengal",
-        description: "The oldest and largest IIT, offering a wide range of engineering and other courses.",
+        locationKey: "kharagpur_west_bengal",
+        descriptionKey: "iit_kharagpur_desc",
         image: "iit-karghapur engineering colleges.jpeg"
     },
     {
         id: "nit-trichy",
-        name: "NIT Tiruchirappalli",
+        nameKey: "nit_trichy_name",
         stream: "engineering",
-        location: "Tiruchirappalli, Tamil Nadu",
-        description: "A top-ranked NIT known for its strong placements and academic excellence.",
+        locationKey: "tiruchirappalli_tamil_nadu",
+        descriptionKey: "nit_trichy_desc",
         image: "NIT-tiruchirappalli.jpg"
     },
 
     // Medical Colleges
     {
         id: "aiims-delhi",
-        name: "AIIMS Delhi",
+        nameKey: "aiims_delhi_name",
         stream: "medical",
-        location: "New Delhi, Delhi",
-        description: "India\'s premier medical institute, offering high-quality medical education and research.",
+        locationKey: "new_delhi_delhi",
+        descriptionKey: "aiims_delhi_desc",
         image: "aiims medical college.jpeg"
     },
     {
         id: "jipmer",
-        name: "JIPMER Puducherry",
+        nameKey: "jipmer_name",
         stream: "medical",
-        location: "Puducherry",
-        description: "A leading medical institution known for its patient care and research.",
+        locationKey: "puducherry",
+        descriptionKey: "jipmer_desc",
         image: "jipmer medical college.jpeg"
     },
     {
         id: "pgimer",
-        name: "PGIMER Chandigarh",
+        nameKey: "pgimer_name",
         stream: "medical",
-        location: "Chandigarh",
-        description: "A highly-rated institute for medical education, research, and training.",
+        locationKey: "chandigarh",
+        descriptionKey: "pgimer_desc",
         image: "PGIMER medical college.jpeg"
     },
     {
         id: "nimhans",
-        name: "NIMHANS Bengaluru",
+        nameKey: "nimhans_name",
         stream: "medical",
-        location: "Bengaluru, Karnataka",
-        description: "A specialized institute for neuroscience and mental health.",
+        locationKey: "bengaluru_karnataka",
+        descriptionKey: "nimhans_desc",
         image: "nimhans medical colleges.jpeg"
     },
     {
         id: "maulana-azad",
-        name: "Maulana Azad Medical College",
+        nameKey: "maulana_azad_name",
         stream: "medical",
-        location: "New Delhi, Delhi",
-        description: "A renowned medical college affiliated with the University of Delhi.",
+        locationKey: "new_delhi_delhi",
+        descriptionKey: "maulana_azad_desc",
         image: "maulana azad college kolkata mpc.jpeg"
     },
 
     // Arts Colleges
     {
         id: "jnu",
-        name: "JNU Delhi",
+        nameKey: "jnu_name",
         stream: "arts",
-        location: "New Delhi, Delhi",
-        description: "Known for its strong focus on humanities, social sciences, and international studies.",
+        locationKey: "new_delhi_delhi",
+        descriptionKey: "jnu_desc",
         image: "jnu ba courses.jpeg"
     },
     {
         id: "du-arts",
-        name: "University of Delhi (Arts)",
+        nameKey: "du_arts_name",
         stream: "arts",
-        location: "New Delhi, Delhi",
-        description: "Offers a wide array of arts and humanities courses across its many affiliated colleges.",
+        locationKey: "new_delhi_delhi",
+        descriptionKey: "du_arts_desc",
         image: "university of delhi arts and humanities.jpeg"
     },
     {
         id: "lsr",
-        name: "Lady Shri Ram College for Women",
+        nameKey: "lsr_name",
         stream: "arts",
-        location: "New Delhi, Delhi",
-        description: "A premier college for women, offering excellent programs in humanities and social sciences.",
+        locationKey: "new_delhi_delhi",
+        descriptionKey: "lsr_desc",
         image: "lsr arts and humanities.jpeg"
     },
     {
         id: "hansraj",
-        name: "Hansraj College (Arts)",
+        nameKey: "hansraj_name",
         stream: "arts",
-        location: "New Delhi, Delhi",
-        description: "A highly sought-after college under Delhi University, offering various arts courses.",
+        locationKey: "new_delhi_delhi",
+        descriptionKey: "hansraj_desc",
         image: "hansraj college arts and humanities.jpeg"
     },
     {
         id: "st-stephens",
-        name: "St. Stephen\'s College (Arts)",
+        nameKey: "st_stephens_name",
         stream: "arts",
-        location: "New Delhi, Delhi",
-        description: "One of the oldest and most prestigious colleges in India, known for its strong arts programs.",
+        locationKey: "new_delhi_delhi",
+        descriptionKey: "st_stephens_desc",
         image: "st.stephens college cec.jpeg"
     },
     // Degree Colleges
     {
         id: "loyola-chennai",
-        name: "Loyola College, Chennai",
+        nameKey: "loyola_chennai_name",
         stream: "degree",
-        location: "Chennai, Tamil Nadu",
-        description: "A prestigious institution offering various undergraduate and postgraduate degree courses in Arts, Science, and Commerce. Known for its academic excellence and vibrant campus life.",
+        locationKey: "chennai_tamil_nadu",
+        descriptionKey: "loyola_chennai_desc",
         image: "loyola degree college chennai.jpg"
     },
     {
         id: "st-josephs-bengaluru",
-        name: "St. Joseph's College, Bengaluru",
+        nameKey: "st_josephs_bengaluru_name",
         stream: "degree",
-        location: "Bengaluru, Karnataka",
-        description: "One of the oldest and most reputed colleges in Karnataka, offering diverse degree programs. Focuses on holistic development and academic rigor.",
+        locationKey: "bengaluru_karnataka",
+        descriptionKey: "st_josephs_bengaluru_desc",
         image: "St. Joseph's degree College, Bengaluru.jpg"
     },
     {
         id: "presidency-kolkata",
-        name: "Presidency University, Kolkata",
+        nameKey: "presidency_kolkata_name",
         stream: "degree",
-        location: "Kolkata, West Bengal",
-        description: "A historic institution with a strong legacy in liberal arts and sciences. Offers a wide range of undergraduate and postgraduate degree courses.",
+        locationKey: "kolkata_west_bengal",
+        descriptionKey: "presidency_kolkata_desc",
         image: "Presidency  degree University, Kolkata.jpg"
     },
     {
         id: "fergusson-pune",
-        name: "Fergusson College, Pune",
+        nameKey: "fergusson_pune_name",
         stream: "degree",
-        location: "Pune, Maharashtra",
-        description: "A renowned college for arts and sciences, known for its rich history, academic environment, and notable alumni. Offers various degree programs.",
+        locationKey: "pune_maharashtra",
+        descriptionKey: "fergusson_pune_desc",
         image: "Fergusson degree College, Pune.jpg"
     },
     {
         id: "christ-bengaluru",
-        name: "Christ University, Bengaluru",
+        nameKey: "christ_bengaluru_name",
         stream: "degree",
-        location: "Bengaluru, Karnataka",
-        description: "A deemed to be university known for its multidisciplinary approach and a wide array of undergraduate and postgraduate degree programs in various fields.",
+        locationKey: "bengaluru_karnataka",
+        descriptionKey: "christ_bengaluru_desc",
         image: "Christ degree University, Bengaluru.jpg"
     }
 ];
@@ -229,44 +229,44 @@ const collegesData = [
 const examsData = [
     {
         id: "jee-main",
-        name: "JEE Main",
+        nameKey: "jee_main_name",
         stream: "engineering",
-        description: "Joint Entrance Examination – Main, for admission to undergraduate engineering programs at NITs, IIITs, and other centrally funded technical institutions.",
+        descriptionKey: "jee_main_desc",
         officialLink: "https://jeemain.nta.nic.in/"
     },
     {
         id: "jee-advanced",
-        name: "JEE Advanced",
+        nameKey: "jee_advanced_name",
         stream: "engineering",
-        description: "Joint Entrance Examination – Advanced, for admission to the Indian Institutes of Technology (IITs). Only candidates who clear JEE Main are eligible.",
+        descriptionKey: "jee_advanced_desc",
         officialLink: "https://jeeadv.ac.in/"
     },
     {
         id: "neet-ug",
-        name: "NEET (UG)",
+        nameKey: "neet_ug_name",
         stream: "medical",
-        description: "National Eligibility cum Entrance Test (Undergraduate), for admission to MBBS/BDS courses in medical and dental colleges nationwide.",
+        descriptionKey: "neet_ug_desc",
         officialLink: "https://neet.nta.nic.in/"
     },
     {
         id: "aiapget",
-        name: "AIAPGET",
+        nameKey: "aiapget_name",
         stream: "medical",
-        description: "All India Ayush Post Graduate Entrance Test, for admission to AYUSH (Ayurveda, Yoga & Naturopathy, Unani, Siddha & Homoeopathy) PG courses.",
+        descriptionKey: "aiapget_desc",
         officialLink: "https://exams.nta.ac.in/AIAPGET/"
     },
     {
         id: "clat",
-        name: "CLAT",
+        nameKey: "clat_name",
         stream: "law",
-        description: "Common Law Admission Test, for admission to undergraduate and postgraduate law programmes offered by 22 National Law Universities in India.",
+        descriptionKey: "clat_desc",
         officialLink: "https://consortiumofnlus.ac.in/"
     },
     {
         id: "lsat-india",
-        name: "LSAT India",
+        nameKey: "lsat_india_name",
         stream: "law",
-        description: "Law School Admission Test India, accepted by many private law colleges in India for admission to their law programs.",
+        descriptionKey: "lsat_india_desc",
         officialLink: "https://www.lsatindia.in/"
     }
 ];
@@ -274,44 +274,74 @@ const examsData = [
 const scholarshipsData = [
     {
         id: "nsp",
-        name: "National Scholarship Portal (NSP)",
+        nameKey: "nsp_name",
         type: "central",
-        description: "A one-stop solution for various scholarship schemes offered by Central Ministries and Departments.",
+        descriptionKey: "nsp_desc",
         link: "https://scholarships.gov.in/"
     },
     {
         id: "ugc-scholarships",
-        name: "UGC Scholarships",
+        nameKey: "ugc_scholarships_name",
         type: "central",
-        description: "Various scholarship schemes provided by the University Grants Commission for higher education.",
+        descriptionKey: "ugc_scholarships_desc",
         link: "https://scholarships.gov.in/"
     },
     {
         id: "wbscc",
-        name: "West Bengal Scholarship Schemes",
+        nameKey: "wbscc_name",
         type: "state-west-bengal",
-        description: "Scholarships offered by the Government of West Bengal for students of the state, including SVMCM (Swami Vivekananda Merit Cum Means Scholarship Scheme).",
+        descriptionKey: "wbscc_desc",
         link: "https://wbscc.wb.gov.in/"
     },
     {
         id: "oasis",
-        name: "OASIS Scholarship (West Bengal)",
+        nameKey: "oasis_name",
         type: "state-west-bengal",
-        description: "Scholarships for SC/ST/OBC students of West Bengal.",
+        descriptionKey: "oasis_desc",
         link: "https://oasis.gov.in/"
     },
     {
         id: "mahadbt",
-        name: "MahaDBT Scholarship (Maharashtra)",
+        nameKey: "mahadbt_name",
         type: "state-maharashtra",
-        description: "Maharashtra Government\'s Direct Benefit Transfer Portal for various scholarship schemes.",
+        descriptionKey: "mahadbt_desc",
         link: "https://mahadbt.maharashtra.gov.in"
     },
     {
         id: "e-scholarship-maha",
-        name: "Maharashtra E-Scholarship Schemes",
+        nameKey: "e_scholarship_maha_name",
         type: "state-maharashtra",
-        description: "Various post-matric scholarship schemes for eligible students in Maharashtra.",
+        descriptionKey: "e_scholarship_maha_desc",
         link: "https://www.buddy4study.com/article/maharashtra-scholarship"
+    }
+];
+
+const quizQuestions = [
+    {
+        id: "q1",
+        questionKey: "q1_text",
+        options: [
+            { value: "creative", textKey: "q1_opt1" },
+            { value: "analytical", textKey: "q1_opt2" },
+            { value: "social", textKey: "q1_opt3" }
+        ]
+    },
+    {
+        id: "q2",
+        questionKey: "q2_text",
+        options: [
+            { value: "science", textKey: "q2_opt1" },
+            { value: "math", textKey: "q2_opt2" },
+            { value: "humanities", textKey: "q2_opt3" }
+        ]
+    },
+    {
+        id: "q3",
+        questionKey: "q3_text",
+        options: [
+            { value: "independent", textKey: "q3_opt1" },
+            { value: "team", textKey: "q3_opt2" },
+            { value: "dynamic", textKey: "q3_opt3" }
+        ]
     }
 ];

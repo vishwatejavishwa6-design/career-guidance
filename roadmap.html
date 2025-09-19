@@ -3,58 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Guidance</title>
+    <title data-i18n-title="professional_guidance">Professional Guidance</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Professional Guidance</div>
+            <div class="logo" data-i18n="professional_guidance">Professional Guidance</div>
+            <div class="language-switcher">
+                <label for="language-select">Language:</label>
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                </select>
+            </div>
         </nav>
     </header>
 
     <main>
         <section id="student-roadmap" class="scroll-reveal">
-            <h1>Your Academic & Career Roadmap (Class 10 & 12)</h1>
-            <p>Navigate your journey from school to college with these clear steps.</p>
+            <h1 data-i18n="roadmap_heading">Your Academic & Career Roadmap (Class 10 & 12)</h1>
+            <p data-i18n="roadmap_intro">Navigate your journey from school to college with these clear steps.</p>
             <div class="roadmap-container">
                 <div class="roadmap-step">
                     <div class="step-icon">1</div>
-                    <h2>Class 10 Completion</h2>
-                    <p>Focus on your core subjects and identify your strengths and interests. Explore different streams available after Class 10.</p>
+                    <h2 data-i18n="class10_completion">Class 10 Completion</h2>
+                    <p data-i18n="class10_desc">Focus on your core subjects and identify your strengths and interests. Explore different streams available after Class 10.</p>
                 </div>
                 <div class="roadmap-arrow">&#10140;</div>
                 <div class="roadmap-step">
                     <div class="step-icon">2</div>
-                    <h2>Stream Choice (Class 11)</h2>
-                    <p>Choose a stream (Science, Commerce, Arts/Humanities) that aligns with your career aspirations and aptitude. Research future prospects for each stream.</p>
+                    <h2 data-i18n="stream_choice_class11">Stream Choice (Class 11)</h2>
+                    <p data-i18n="stream_choice_desc">Choose a stream (Science, Commerce, Arts/Humanities) that aligns with your career aspirations and aptitude. Research future prospects for each stream.</p>
                 </div>
                 <div class="roadmap-arrow">&#10140;</div>
                 <div class="roadmap-step">
                     <div class="step-icon">3</div>
-                    <h2>Class 12 Preparation & Entrance Exams</h2>
-                    <p>Dedicate yourself to Class 12 studies. Identify relevant entrance exams (e.g., JEE, NEET, CLAT) for your chosen career path and begin preparation.</p>
+                    <h2 data-i18n="class12_prep_exams">Class 12 Preparation & Entrance Exams</h2>
+                    <p data-i18n="class12_prep_desc">Dedicate yourself to Class 12 studies. Identify relevant entrance exams (e.g., JEE, NEET, CLAT) for your chosen career path and begin preparation.</p>
                 </div>
                 <div class="roadmap-arrow">&#10140;</div>
                 <div class="roadmap-step">
                     <div class="step-icon">4</div>
-                    <h2>College & Course Selection</h2>
-                    <p>Research top colleges and courses based on your stream and entrance exam performance. Consider factors like faculty, infrastructure, placements, and fees.</p>
+                    <h2 data-i18n="college_course_selection">College & Course Selection</h2>
+                    <p data-i18n="college_course_desc">Research top colleges and courses based on your stream and entrance exam performance. Consider factors like faculty, infrastructure, placements, and fees.</p>
                 </div>
                 <div class="roadmap-arrow">&#10140;</div>
                 <div class="roadmap-step">
                     <div class="step-icon">5</div>
-                    <h2>Admissions & Scholarships</h2>
-                    <p>Apply to your preferred colleges and courses. Explore various scholarship opportunities (government, private) to fund your education.</p>
+                    <h2 data-i18n="admissions_scholarships">Admissions & Scholarships</h2>
+                    <p data-i18n="admissions_scholarships_desc">Apply to your preferred colleges and courses. Explore various scholarship opportunities (government, private) to fund your education.</p>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Career Guidance. All rights reserved.</p>
+        <p data-i18n="copyright">&copy; 2025 Career Guidance. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
+    <script src="data.js"></script>
+    <script src="language.js"></script>
 </body>
 </html>

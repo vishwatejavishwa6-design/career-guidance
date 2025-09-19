@@ -3,38 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Guidance</title>
+    <title data-i18n-title="professional_guidance">Professional Guidance</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Professional Guidance</div>
+            <div class="logo" data-i18n="professional_guidance">Professional Guidance</div>
+            <div class="language-switcher">
+                <label for="language-select">Language:</label>
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                </select>
+            </div>
         </nav>
     </header>
 
     <main>
         <section id="nep2020-info" class="scroll-reveal">
-            <h1>National Education Policy 2020</h1>
-            <p>The National Education Policy 2020 (NEP 2020) aims to transform India's education system to meet the demands of the 21st century. It focuses on holistic, flexible, and multidisciplinary education, moving away from rote learning to critical thinking and experiential learning.</p>
-            <h2>Key Reforms:</h2>
+            <h1 data-i18n="nep2020_heading">National Education Policy 2020</h1>
+            <p data-i18n="nep2020_page_intro">The National Education Policy 2020 (NEP 2020) aims to transform India's education system to meet the demands of the 21st century. It focuses on holistic, flexible, and multidisciplinary education, moving away from rote learning to critical thinking and experiential learning.</p>
+            <h2 data-i18n="key_reforms">Key Reforms:</h2>
             <ul>
-                <li>Early Childhood Care and Education (ECCE) from age 3.</li>
-                <li>New 5+3+3+4 curricular structure.</li>
-                <li>No rigid separation between arts and sciences, curricular and extra-curricular activities, vocational and academic streams.</li>
-                <li>Emphasis on foundational literacy and numeracy.</li>
-                <li>Increased focus on vocational education and digital learning.</li>
-                <li>Establishment of a National Research Foundation.</li>
+                <li data-i18n="ecc_education">Early Childhood Care and Education (ECCE) from age 3.</li>
+                <li data-i18n="new_curricular_structure">New 5+3+3+4 curricular structure.</li>
+                <li data-i18n="no_rigid_separation">No rigid separation between arts and sciences, curricular and extra-curricular activities, vocational and academic streams.</li>
+                <li data-i18n="foundational_literacy_numeracy">Emphasis on foundational literacy and numeracy.</li>
+                <li data-i18n="vocational_digital_learning">Increased focus on vocational education and digital learning.</li>
+                <li data-i18n="national_research_foundation">Establishment of a National Research Foundation.</li>
             </ul>
-            <p>For more detailed information, please visit the official Ministry of Education website:</p>
-            <p><a href="https://www.education.gov.in/en/nep/about-nep" target="_blank">Official NEP 2020 Link</a></p>
+            <p data-i18n="more_info">For more detailed information, please visit the official Ministry of Education website:</p>
+            <p><a href="https://www.education.gov.in/en/nep/about-nep" target="_blank" data-i18n="official_nep2020_link">Official NEP 2020 Link</a></p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Career Guidance. All rights reserved.</p>
+        <p data-i18n="copyright">&copy; 2025 Career Guidance. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
+    <script src="data.js"></script>
+    <script src="language.js"></script>
 </body>
 </html>
